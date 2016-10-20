@@ -1,0 +1,185 @@
+extends _layout
+
+block content
+  link(rel='stylesheet', href='/css/car.css')
+  .navbar-wrapper
+    .container
+      nav.navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a(href='/')
+              img(src='/img/logo_invert.png' height="50px")
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              li.front-page
+                a(href='/') Home
+              li.dropdown.front-page
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | Sponsors
+                  span.caret
+                ul.dropdown-menu
+                  li
+                    a(href='/becomeasponsor/') Become a Sponsor
+                  li
+                    a(href='/sponsors/') UV16 Sponsors
+                  li
+                    a(href='/indisponsors/') Individual Sponsors
+
+              li.dropdown.active.front-page
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                  | About
+                  span.caret
+                ul.dropdown-menu
+                  li.active
+                    a(href='/aboutcar/') The Car
+                  li
+                    a(href='/render/') &nbsp;&nbsp;&nbsp;UV15 Render
+                  li
+                    a(href='/aboutteam/') The Team
+                  li
+                    a(href='/aboutcomp/') The Competition
+              li.front-page
+                a(href='/contact/') Contact
+
+  .container
+    .row
+      h1(style="color:black;text-align:center;text-decoration:underline") UV16 Car
+      //- br
+      //- .col-xs-12
+      //-   iframe(src='/render/UV15 - Final - Aug8_VR.11.html', style="display: block; margin: 0 auto;", width='100%', height='720px', frameborder='10') iframe not supported by your browser
+
+  include _socialmedia.jade
+
+  // ABOUT THE CARS
+  .container
+    .row
+      .col-sm-4
+        .row
+          .col-xs-12
+            section.widget.thumbnails
+
+              h3(style="font-weight:800;") 2016 Car:
+              .col-xs-12.carblock
+                img(src='/img/UV16car.JPG', alt='UV16')
+
+              h3(style="font-weight:800;") 2015 Car:
+              .col-xs-12.carblock
+                img(src='/img/car2015-2.jpg', alt='UV15')
+
+              h3(style="font-weight:800;") 2014 Car:
+              .col-xs-12.carblock
+                img(src='/img/car2014.jpg', alt='UV14')
+
+              h3(style="font-weight:800;") 2013 Car:
+              .col-xs-12.carblock
+                img(src='/img/car2013.jpg', alt='UV13')
+
+              h3(style="font-weight:800;") 2012 Car:
+              .col-xs-12.carblock
+                img(src='/img/car2012.jpg', alt='UV12')
+
+      .col-sm-8
+        // Content
+        #content
+          section.last
+            h3(style="font-weight:800;") 2016 Car Information
+            table.default
+              thead
+                tr
+                  th Specifications
+                  th
+              tbody
+                tr
+                  td Car Number
+                  td 21
+                tr
+                  td Color
+                  td White with blue, red, and yellow stripes
+                tr
+                  td Frame
+                  td 4130 Chromoly steel space frame
+                tr
+                  td Aero
+                  td
+                    | Carbon Fibre: 3-Piece Body, 3-Element Front Wing, 4-Element Rear Wing, Diffuser, and 2 Sidepods
+                tr
+                  td Suspension
+                  td
+                    | Independent unequal length chromoly A-arms, with pull rod actuated Cane Creek shocks
+                tr
+                  td Wheels
+                  td
+                    | In house centre design machined by Prototype Equipment Design with Kodiak 13×7 shells
+                tr
+                  td Engine
+                  td Honda CBR 600 F4I with Liferacing F88RX
+                tr
+                  td Power/Torque
+                  td 95 HP @ 12500 RPM/54 ft·lbs @ 8250 RPM
+                tr
+                  td Fuel
+                  td 100 Octane Race
+                tr
+                  td Transmission
+                  td 6-speed Sequential
+                tr
+                  td Shifter
+                  td Electro-pneumatic, button actuated shifting system resulting in sub-100ms shifts
+                tr
+                  td Final Drive
+                  td #520 chain, 11:44 ratio
+                tr
+                  td Differential
+                  td Custom aluminum carrier housing Zexel-Torsen torque biasing gears
+                tr
+                  td Brakes, Front
+                  td Floating 9.2" Grey Cast Iron Rotors, Brembo Calipers
+                tr
+                  td Brakes, Rear
+                  td Floating Grey 8" Cast Iron Rotors, Brembo Calipers
+              thead
+                tr
+                  th Dimensions
+                  th
+              tbody
+                tr
+                  td Wheelbase
+                  td 63″
+                tr
+                  td Track, Front/Rear
+                  td 47.5″/44.5″
+                tr
+                  td Length
+                  td 107.4″
+                tr
+                  td Weight
+                  td 506 lbs / 230 kg
+                tr
+                  td Weight Distribution, Front:Rear
+                  td 48.5:51.5
+              thead
+                tr
+                  th Performance
+                  th
+              tbody
+                tr
+                  td 75 Metre Sprint
+                  td 4.409 s
+                tr
+                  td Top Speed
+                  td 160 km/h
+                tr
+                  td Lateral Grip
+                  td 2.2 g
+                tr
+                  td Braking
+                  td 1.5 g
+
+
+
+  include _sponsors.jade
